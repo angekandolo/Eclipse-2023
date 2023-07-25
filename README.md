@@ -1,7 +1,8 @@
 # Eclipse-2023
 folder for Perscholas
 
-For the Capstone project
+For the Capstone project,
+
 Hello, 
 
 This a general Spring boot applictaion for a anime content website.
