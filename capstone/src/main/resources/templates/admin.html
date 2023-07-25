@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Submissions (Admin Page)</h1>
+    <div id="submissionsContainer"></div>
+
+    <script>
+        // Fetch submissions data from the backend using Fetch API
+        fetch('/submissions')
+        .then(response => response.json())
+        .then(data => {
+            const submissionsContainer = document.getElementById("submissionsContainer");
+            data.forEach(submission => {
+                const submissionElement = document.createElement("div");
+                submissionElement.innerHTML = `
+                    <p>Name: ${submission.name}</p>
+                    <p>Email: ${submission.email}</p>
+                    <p>Details: ${submission.details}</p>
+                    <hr>
+                `;
+                submissionsContainer.appendChild(submissionElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching submissions:', error);
+            const errorElement = document.createElement("p");
+            errorElement.textContent = 'An error occurred while fetching submissions. Please try again.';
+            document.getElementById("submissionsContainer").appendChild(errorElement);
+        });
+    </script>
+</body>
+</html>

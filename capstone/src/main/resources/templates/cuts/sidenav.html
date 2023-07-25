@@ -1,0 +1,82 @@
+
+
+  <div class="wrapper">
+
+    <div th:fragment="sidebar">
+       <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3 style="color: white;">Love Anime</h3>
+            <strong>LA</strong>
+        </div>
+
+    <ul class="list-unstyled components">
+                
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="/">Homepage</a>
+                        </li>
+                        <li>
+                            <a href="/aboutus">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/form_submission">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+         
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="/SoloLeveling">Solo Leveling</a>
+                        </li>
+                        <li>
+                            <a href="/naruto">Naruto</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/registration">Register</a>
+                </li>
+                  <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a href="/profile">Profile</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
+				    <a href="/submissions">Submissions</a>
+				</li>
+				 <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a href="/favorites">Your Favorites</a>
+                </li>
+
+            </ul>
+              <ul class="list-unstyled CTAs">
+	   <li class="nav-item" sec:authorize="isAuthenticated()">
+        <a class="nav-link" href="/logout" id="logoutLink">Logout</a>
+    </li>
+    <li class="nav-item" sec:authorize="!isAuthenticated()">
+        <a class="nav-link" href="/login" id="loginLink">Login</a>
+    </li>
+			    </ul>
+
+            
+
+
+        </nav>
+   
+
+ 
+
+<div id="content">
+
+        </div>
+</div>
+</div>
+
+
+
+
