@@ -34,18 +34,23 @@ public class HomeController {
 	        return "/Naruto";
 	 }
 	 
-	 @GetMapping("/eggs")
-	    public String Eggs() {
-	        return "/eggs";
+
+	
+	 @GetMapping("/OshiNoKo")
+	    public String OshiNoKo() {
+	        return "/OshinoKo";
+	 }
+	
+	 
+	 @GetMapping("/JujutsuKaisen")
+	    public String JujutsuKaisen() {
+	        return "/JujutsuKaisen";
 	 }
 	 
-	 @GetMapping("/contact")
-	    public String Contact() {
-	        return "/contact";
+	 
+	 @GetMapping("/KimetsunoYaiba")
+	    public String KimetsunoYaiba() {
+	        return "/KimetsunoYaiba";
 	 }
-	
-
-	
-
 
 }
